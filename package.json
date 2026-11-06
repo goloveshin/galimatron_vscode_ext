@@ -1,0 +1,64 @@
+{
+  "name": "gal-syntax",
+  "displayName": "GaL",
+  "description": "Syntax highlighting for GaL (.gal), and a command that runs Galimatron.",
+  "version": "0.1.7",
+  "publisher": "galimatron",
+  "license": "BSL-1.0",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goloveshin/galimatron_vscode_ext.git"
+  },
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "activationEvents": ["onStartupFinished", "onCommand:galimatron.execute"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "galimatron.execute",
+        "title": "Galimatron: execute"
+      }
+    ],
+    "configuration": {
+      "title": "Galimatron",
+      "properties": {
+        "galimatron.executable": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the galimatron executable. galimatron.exe on Windows, galimatron on Linux."
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "gal",
+        "aliases": ["GaL", "gal"],
+        "extensions": [".gal"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gal",
+        "scopeName": "source.gal",
+        "path": "./syntaxes/gal.tmLanguage.json"
+      }
+    ]
+  }
+}

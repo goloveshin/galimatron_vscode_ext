@@ -1,0 +1,91 @@
+{
+  "scopeName": "source.gal",
+  "name": "GaL",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#raw-string" },
+    { "include": "#string" },
+    { "include": "#keyword" },
+    { "include": "#template-mark" },
+    { "include": "#number" },
+    { "include": "#identifier" },
+    { "include": "#operator" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.gal",
+          "match": "//.*"
+        },
+        {
+          "name": "comment.block.gal",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "raw-string": {
+      "name": "string.quoted.raw.gal",
+      "begin": "R([\"'])(-*)\\(",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.gal" }
+      },
+      "end": "\\)\\2\\1",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.gal" }
+      }
+    },
+    "string": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.gal",
+          "begin": "\"",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.gal" }
+          },
+          "end": "\"",
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.gal" }
+          }
+        },
+        {
+          "name": "string.quoted.single.gal",
+          "begin": "'",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.gal" }
+          },
+          "end": "'",
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.gal" }
+          }
+        }
+      ]
+    },
+    "keyword": {
+      "name": "keyword.control.gal",
+      "match": "\\b(?:root|aggregate|versions|version|label|static|dynamic|tag|tag-name-from|once|local|ordering|comment|hash|deleted|delete|wizard|create|important|in)\\b"
+    },
+    "template-mark": {
+      "name": "keyword.other.gal",
+      "match": "\\b_te\\b"
+    },
+    "number": {
+      "name": "constant.numeric.gal",
+      "match": "\\b[0-9]+\\b"
+    },
+    "identifier": {
+      "name": "variable.other.gal",
+      "match": "\\b[A-Za-z][A-Za-z0-9_]*\\b"
+    },
+    "operator": {
+      "name": "keyword.operator.gal",
+      "match": "="
+    },
+    "punctuation": {
+      "name": "punctuation.gal",
+      "match": "[{}\\[\\]();:,.<>]"
+    }
+  }
+}
