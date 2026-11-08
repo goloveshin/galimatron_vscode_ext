@@ -65,7 +65,7 @@
     },
     "keyword": {
       "name": "keyword.control.gal",
-      "match": "\\b(?:root|aggregate|versions|version|label|static|dynamic|tag|tag-name-from|once|local|ordering|comment|hash|deleted|delete|wizard|create|important|in)\\b"
+      "match": "\\b(?:root|aggregate|versions|version|before|label|static|dynamic|tag|tag-name-from|once|local|own|ordering|comment|hash|deleted|delete|wizard|create|in|copy|to|continue|physically|force|collapse)\\b"
     },
     "template-mark": {
       "name": "keyword.other.gal",
@@ -85,7 +85,7 @@
     },
     "punctuation": {
       "name": "punctuation.gal",
-      "match": "[{}\\[\\]();:,.<>]"
+      "match": "[{}\\[\\]();:,.<>\\-]"
     }
   }
 }
