@@ -14,4 +14,4 @@ The command needs `log.cfg` in the same directory as `gal.cfg`. It runs the gali
 
 When the extension starts, it looks for an installed executable and stores the path in **Galimatron: Executable** (`galimatron.executable`). On Windows that file is `galimatron.exe`, on `PATH` or in `Program Files\Galimatron\bin`. On Linux it is `galimatron`, on `PATH`, in `/usr/bin`, or in `/usr/local/bin`. A path that already points at a file is left as it is.
 
-If nothing is found, the extension asks **Galimatron not found. Would you like to install it?** Yes opens the Galimatron project on GitHub. The question is asked once. If the path is still empty when you run the command, it asks you to pick the executable and stores that path.
+If nothing is found, the extension asks **Galimatron not found. Would you like to install it? Restart Visual Studio Code afterward so the executable can be found.** Yes opens the Galimatron project on GitHub. The question is asked once. The search runs again on the next start. If the path is still empty when you run the command, it asks you to pick the executable and stores that path.

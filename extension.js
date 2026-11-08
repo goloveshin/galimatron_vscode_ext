@@ -73,7 +73,7 @@ async function locateGalimatron(context) {
   }
   await context.globalState.update("galimatron.installPrompted", true);
   const answer = await vscode.window.showInformationMessage(
-    "Galimatron not found. Would you like to install it?",
+    "Galimatron not found. Would you like to install it? Restart Visual Studio Code afterward so the executable can be found.",
     "Yes"
   );
   if (answer === "Yes") {

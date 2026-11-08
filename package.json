@@ -2,7 +2,7 @@
   "name": "gal-syntax",
   "displayName": "GaL",
   "description": "Syntax highlighting for GaL (.gal), and a command that runs Galimatron.",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "publisher": "galimatron",
   "license": "BSL-1.0",
   "icon": "icon.png",
