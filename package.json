@@ -6,6 +6,10 @@
   "publisher": "galimatron",
   "license": "BSL-1.0",
   "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#FFFFFF",
+    "theme": "light"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/goloveshin/galimatron_vscode_ext.git"
