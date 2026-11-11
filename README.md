@@ -1,10 +1,10 @@
-![Galimatron](images/galimatron-banner.png)
-
 # GaL
 
 Syntax highlighting for GaL (`.gal`) files, and a command that runs Galimatron on the open `gal.cfg`.
 
 Part of [Galimatron](https://github.com/goloveshin/galimatron), a tool that keeps one versioned description of your data in `.gal` files and generates everything else from it.
+
+![The GaL extension in the Visual Studio Code marketplace](images/vscode-extension-marketplace.png)
 
 ## Coloring
 
